@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-dm-sans: "DM Sans";
+  --font-bricolage: "Bricolage Grotesque";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: hsl(243 96% 9%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: hsl(243 96% 9%);
+  color: white;
+  font-family: var(--font-dm-sans), Arial, sans-serif;
+  font-size: 18px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(243 27% 20%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(243 23% 30%);
+  border-radius: 999px;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-0;
+}
+
+.weather-card {
+  @apply rounded-2xl border border-neutral-600/70 bg-neutral-800;
+}
